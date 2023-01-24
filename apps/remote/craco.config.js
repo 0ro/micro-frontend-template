@@ -4,12 +4,17 @@ const { ModuleFederationPlugin } = require("webpack").container;
 module.exports = {
   webpack: {
     configure: (webpackConfig, { env, paths }) => {
+      webpackConfig.output = {
+        ...webpackConfig.output,
+        publicPath: "auto",
+      };
       webpackConfig.plugins = [
         ...webpackConfig.plugins,
         new ModuleFederationPlugin({
-          name: "host",
-          remotes: {
-            remote: "remote@http://127.0.0.1:5001/remote.js",
+          name: "remote",
+          filename: "remote.js",
+          exposes: {
+            "./App": "./src/App",
           },
           shared: {
             react: {

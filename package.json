@@ -7,13 +7,17 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "pnpm --stream -r build",
-    "preview": "pnpm --stream -r preview",
-    "dev": "pnpm --stream -r dev",
-    "lint": "pnpm --stream -r lint"
+    "build": "pnpm --parallel run build",
+    "preview": "pnpm --parallel run preview",
+    "dev": "pnpm --parallel run dev",
+    "lint": "pnpm --parallel run lint",
+    "lint:fix": "pnpm --parallel run lint:fix"
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "eslint-config-custom": "*"
   },
   "packageManager": "pnpm@7.25.1"
 }
