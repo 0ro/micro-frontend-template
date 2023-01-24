@@ -11,10 +11,12 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "serve": "^14.1.2",
+    "tsconfig": "workspace:*",
     "typescript": "^4.9.4"
   },
   "scripts": {
@@ -23,6 +25,7 @@
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint ./src",
+    "typecheck": "tsc --noEmit",
     "lint:fix": "eslint ./src --fix"
   },
   "eslintConfig": {

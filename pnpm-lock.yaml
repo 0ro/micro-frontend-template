@@ -18,10 +18,12 @@ importers:
       '@types/node': ^16.18.11
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
+      eslint-config-custom: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       react-scripts: 5.0.1
       serve: ^14.1.2
+      tsconfig: workspace:*
       typescript: ^4.9.4
     dependencies:
       '@craco/craco': 7.0.0_m3ompgo4kjxanpgl5mqx5hsvwa
@@ -32,10 +34,12 @@ importers:
       '@types/node': 16.18.11
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
+      eslint-config-custom: link:../../packages/eslint-config-custom
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_o77wnou4wwnegu5woljtklrzru
       serve: 14.1.2
+      tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
 
   apps/remote:
@@ -48,12 +52,13 @@ importers:
       '@types/node': ^16.18.11
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
-      eslint-config-custom: '*'
+      eslint-config-custom: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       react-scripts: 5.0.1
       sass: ^1.57.1
       serve: ^14.1.2
+      tsconfig: workspace:*
       typescript: ^4.9.4
     dependencies:
       '@craco/craco': 7.0.0_m3ompgo4kjxanpgl5mqx5hsvwa
@@ -70,6 +75,7 @@ importers:
       react-scripts: 5.0.1_tennmlpioiftpptsysjzsdxowu
       sass: 1.57.1
       serve: 14.1.2
+      tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
 
   packages/eslint-config-custom:

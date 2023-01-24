@@ -11,7 +11,8 @@
     "preview": "pnpm --parallel run preview",
     "dev": "pnpm --parallel run dev",
     "lint": "pnpm --parallel run lint",
-    "lint:fix": "pnpm --parallel run lint:fix"
+    "lint:fix": "pnpm --parallel run lint:fix",
+    "typecheck": "pnpm --parallel run typecheck"
   },
   "engines": {
     "node": ">=14.0.0"
