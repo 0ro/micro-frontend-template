@@ -7,19 +7,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "build": "pnpm --stream -r build",
+    "preview": "pnpm --stream -r preview",
+    "dev": "pnpm --stream -r dev",
+    "lint": "pnpm --stream -r lint"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.25.1"
 }
