@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Button } from "ui";
+import useStore from "store";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -8,6 +10,7 @@ import "./App.css";
 const RemoteApp = React.lazy(() => import("remote/App"));
 
 function App() {
+  const { count, increase } = useStore((state) => state);
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +27,8 @@ function App() {
         >
           Learn React
         </a>
+        <Button />
+        <button onClick={() => increase(1)}>Boop {count}</button>
       </header>
       <Suspense fallback="...">
         <RemoteApp />

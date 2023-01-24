@@ -23,8 +23,11 @@ importers:
       react-dom: ^18.2.0
       react-scripts: 5.0.1
       serve: ^14.1.2
+      store: workspace:*
+      ts-loader: ^9.4.2
       tsconfig: workspace:*
       typescript: ^4.9.4
+      ui: workspace:*
     dependencies:
       '@craco/craco': 7.0.0_m3ompgo4kjxanpgl5mqx5hsvwa
       '@testing-library/jest-dom': 5.16.5
@@ -39,8 +42,11 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_o77wnou4wwnegu5woljtklrzru
       serve: 14.1.2
+      store: link:../../packages/store
+      ts-loader: 9.4.2_typescript@4.9.4
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
+      ui: link:../../packages/ui
 
   apps/remote:
     specifiers:
@@ -58,6 +64,8 @@ importers:
       react-scripts: 5.0.1
       sass: ^1.57.1
       serve: ^14.1.2
+      store: workspace:*
+      ts-loader: ^9.4.2
       tsconfig: workspace:*
       typescript: ^4.9.4
     dependencies:
@@ -75,6 +83,8 @@ importers:
       react-scripts: 5.0.1_tennmlpioiftpptsysjzsdxowu
       sass: 1.57.1
       serve: 14.1.2
+      store: link:../../packages/store
+      ts-loader: 9.4.2_typescript@4.9.4
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.4
 
@@ -98,6 +108,19 @@ importers:
       prettier: 2.8.3
     devDependencies:
       typescript: 4.9.4
+
+  packages/store:
+    specifiers:
+      eslint-config-custom: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.9.4
+      zustand: ^4.3.2
+    dependencies:
+      typescript: 4.9.4
+      zustand: 4.3.2
+    devDependencies:
+      eslint-config-custom: link:../eslint-config-custom
+      tsconfig: link:../tsconfig
 
   packages/tsconfig:
     specifiers: {}
@@ -10169,6 +10192,20 @@ packages:
     resolution: {integrity: sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==}
     dev: false
 
+  /ts-loader/9.4.2_typescript@4.9.4:
+    resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      typescript: '*'
+      webpack: ^5.0.0
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 5.12.0
+      micromatch: 4.0.5
+      semver: 7.3.8
+      typescript: 4.9.4
+    dev: false
+
   /ts-node/10.9.1_qacynw5b4krdzzrloasmebsynu:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
@@ -10382,6 +10419,12 @@ packages:
     dependencies:
       querystringify: 2.2.0
       requires-port: 1.0.0
+    dev: false
+
+  /use-sync-external-store/1.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dev: false
 
   /util-deprecate/1.0.2:
@@ -11001,4 +11044,19 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zustand/4.3.2:
+    resolution: {integrity: sha512-rd4haDmlwMTVWVqwvgy00ny8rtti/klRoZjFbL/MAcDnmD5qSw/RZc+Vddstdv90M5Lv6RPgWvm1Hivyn0QgJw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      use-sync-external-store: 1.2.0
     dev: false
