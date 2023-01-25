@@ -31,5 +31,11 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
+    "react": "^18.2.0",
+    "sass": "^1.57.1"
+  },
+  "exports": {
+    ".": "./index.tsx",
+    "./global.scss": "./global.scss"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "name": "store",
+  "version": "0.0.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*",
+    "lint:fix": "eslint *.ts* --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4",
+    "zustand": "^4.3.2"
+  }
+}

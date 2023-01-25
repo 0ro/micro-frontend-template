@@ -1,1 +1,2 @@
-export * from "./components/stories/Buttonn
+import * as React from "react";
+export * from "./components/button/Button";
