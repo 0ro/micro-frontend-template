@@ -12,7 +12,8 @@
     "dev": "pnpm --parallel run dev",
     "lint": "pnpm --parallel run lint",
     "lint:fix": "pnpm --parallel run lint:fix",
-    "typecheck": "pnpm --parallel run typecheck"
+    "typecheck": "pnpm --parallel run typecheck",
+    "ci": "concurrently \"pnpm --parallel run lint\" \"pnpm --parallel run typecheck\""
   },
   "engines": {
     "node": ">=14.0.0"
@@ -20,5 +21,9 @@
   "dependencies": {
     "eslint-config-custom": "*"
   },
-  "packageManager": "pnpm@7.25.1"
+  "packageManager": "pnpm@7.25.1",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.3"
+  }
 }
