@@ -1,5 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const { ModuleFederationPlugin } = require("webpack").container;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const deps = require("./package.json").dependencies;
 
 module.exports = {
   webpack: {
@@ -25,11 +27,20 @@ module.exports = {
           shared: {
             react: {
               singleton: true,
+              eager: true,
+              requiredVersion: deps.react,
             },
             "react-dom": {
               singleton: true,
+              eager: true,
+              requiredVersion: deps["react-dom"],
             },
             store: {
+              eager: true,
+              singleton: true,
+            },
+            ui: {
+              eager: true,
               singleton: true,
             },
           },
