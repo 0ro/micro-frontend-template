@@ -28,8 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <Button />
-        <button onClick={() => increase(1)}>Boop {count}</button>
+        <Button onClick={() => increase(1)}>Boop {count}</Button>
       </header>
       <Suspense fallback="...">
         <RemoteApp />
