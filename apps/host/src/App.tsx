@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
 import "ui/global.scss";
-import styles from "./App.module.scss";
-import { Button } from "ui";
+
 import useStore from "store";
 import { Link } from "react-router-dom";
+import { Button } from "ui";
 import { Routes } from "project-constants";
+
+import logo from "./logo.svg";
+
+import styles from "./App.module.scss";
 
 function App() {
   const { count, increase } = useStore((state) => state);

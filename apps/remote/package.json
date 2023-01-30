@@ -2,6 +2,17 @@
   "name": "remote",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "preview": "serve -s build -p 5001",
+    "typecheck": "tsc --noEmit",
+    "build": "craco build",
+    "lint:eslint": "eslint ./src",
+    "lint:stylelint": "stylelint \"src/**/*.scss\" \"src/**/*.module.scss\"",
+    "lint:fix": "concurrently \"npm run lint:eslint -- --fix\" \"npm run lint:stylelint -- --fix\"",
+    "lint": "concurrently \"npm run lint:eslint\" \"npm run lint:stylelint\"",
+    "test": "craco test"
+  },
   "dependencies": {
     "@craco/craco": "^7.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,8 +22,8 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "project-constants": "workspace:*",
     "eslint-config-custom": "workspace:*",
+    "project-constants": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
@@ -20,19 +31,15 @@
     "sass": "^1.57.1",
     "serve": "^14.1.2",
     "store": "workspace:*",
+    "stylelint": "^14.16.1",
+    "stylelint-config-custom": "workspace:*",
     "ts-loader": "^9.4.2",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.4",
     "ui": "workspace:*"
   },
-  "scripts": {
-    "start": "craco start",
-    "preview": "serve -s build -p 5001",
-    "typecheck": "tsc --noEmit",
-    "build": "craco build",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
-    "test": "craco test"
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   },
   "browserslist": {
     "production": [

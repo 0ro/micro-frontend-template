@@ -1,8 +1,9 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Routes } from "project-constants";
+
+import App from "./App";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
