@@ -38,6 +38,10 @@ module.exports = {
               requiredVersion: deps.react,
               singleton: true,
             },
+            "react-router-dom": {
+              singleton: true,
+              requiredVersion: deps["react-router-dom"],
+            },
             store: {
               singleton: true,
             },

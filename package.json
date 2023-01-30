@@ -13,7 +13,7 @@
     "lint": "pnpm --parallel run lint",
     "lint:fix": "pnpm --parallel run lint:fix",
     "typecheck": "pnpm --parallel run typecheck",
-    "ci": "concurrently \"pnpm --parallel run lint\" \"pnpm --parallel run typecheck\""
+    "lint:ci": "concurrently \"pnpm --parallel run lint\" \"pnpm --parallel run typecheck\""
   },
   "engines": {
     "node": ">=14.0.0"

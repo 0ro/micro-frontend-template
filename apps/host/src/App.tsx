@@ -1,14 +1,10 @@
-import React, { Suspense } from "react";
 import logo from "./logo.svg";
 import "ui/global.scss";
 import styles from "./App.module.scss";
 import { Button } from "ui";
 import useStore from "store";
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// eslint-disable-next-line import/no-unresolved
-const RemoteApp = React.lazy(() => import("remote/App"));
+import { Link } from "react-router-dom";
+import { Routes } from "project-constants";
 
 function App() {
   const { count, increase } = useStore((state) => state);
@@ -29,10 +25,9 @@ function App() {
           Learn React
         </a>
         <Button onClick={() => increase(1)}>Boop {count}</Button>
+        <div>Hello</div>
+        <Link to={Routes.Remote}>Remote</Link>
       </header>
-      <Suspense fallback="...">
-        <RemoteApp />
-      </Suspense>
     </div>
   );
 }

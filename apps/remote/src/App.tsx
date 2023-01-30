@@ -2,6 +2,9 @@ import logo from "./logo.svg";
 import "ui/global.scss";
 import useMainStore from "store";
 import styles from "./App.module.scss";
+import { Routes } from "project-constants";
+
+import { Link } from "react-router-dom";
 
 function App() {
   const count = useMainStore((state) => state.count);
@@ -21,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <Link to={Routes.Host}>Host</Link>
       </header>
     </div>
   );
