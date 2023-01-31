@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "craco start",
-    "preview": "serve -s build -p 3000",
+    "preview": "serve -s build -p 5000",
     "build": "craco build",
     "test": "craco test",
     "lint:eslint": "eslint ./src",
