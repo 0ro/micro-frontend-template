@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const { ModuleFederationPlugin } = require("webpack").container;
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const deps = require("./package.json").dependencies;
 

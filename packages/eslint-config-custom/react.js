@@ -1,13 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   extends: ["react-app", "custom"],
-  settings: {
-    typescript: true,
-    node: true,
-    react: {
-      version: "detect",
-    },
-  },
   rules: {
     "import/order": [
       "error",

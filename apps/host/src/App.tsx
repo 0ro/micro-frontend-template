@@ -12,15 +12,15 @@ import styles from "./App.module.scss";
 function App() {
   const { count, increase } = useStore((state) => state);
   return (
-    <div className="App">
-      <header className={styles["App-header"]}>
+    <div className={styles.app}>
+      <header className={styles["app-header"]}>
         <h1>HOST</h1>
-        <img src={logo} className={styles["App-logo"]} alt="logo" />
+        <img src={logo} className={styles["app-logo"]} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className={styles["App-link"]}
+          className={styles["app-link"]}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
