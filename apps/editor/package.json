@@ -1,0 +1,59 @@
+{
+  "name": "editor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "craco start",
+    "preview": "serve -s build -p 5002",
+    "typecheck": "tsc --noEmit",
+    "build": "craco build --watch",
+    "lint:eslint": "eslint ./src",
+    "lint:stylelint": "stylelint \"src/**/*.scss\" \"src/**/*.module.scss\"",
+    "lint:fix": "concurrently \"npm run lint:eslint -- --fix\" \"npm run lint:stylelint -- --fix\"",
+    "lint": "concurrently \"npm run lint:eslint\" \"npm run lint:stylelint\"",
+    "test": "craco test"
+  },
+  "dependencies": {
+    "@craco/craco": "^7.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/fabric": "^4.5.15",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "eslint-config-custom": "workspace:*",
+    "fabric": "^5.3.0",
+    "project-constants": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.57.1",
+    "serve": "^14.1.2",
+    "store": "workspace:*",
+    "stylelint": "^14.16.1",
+    "stylelint-config-custom": "workspace:*",
+    "ts-loader": "^9.4.2",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.9.4",
+    "ui": "workspace:*",
+    "zustand": "^4.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

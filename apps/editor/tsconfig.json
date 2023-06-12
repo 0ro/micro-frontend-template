@@ -1,0 +1,5 @@
+{
+  "extends": "tsconfig/create-react-app.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

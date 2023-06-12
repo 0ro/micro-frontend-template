@@ -24,6 +24,7 @@ module.exports = {
           name: "host",
           remotes: {
             remote: "remote@http://127.0.0.1:5001/remote.js",
+            editor: "editor@http://127.0.0.1:5001/editor.js",
           },
           shared: {
             react: {
